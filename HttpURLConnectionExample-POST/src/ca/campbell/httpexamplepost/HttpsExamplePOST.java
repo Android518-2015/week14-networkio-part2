@@ -16,11 +16,6 @@ import java.security.cert.Certificate;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLPeerUnverifiedException;
-
-
-
-
-import ca.campbell.httpexample.R;
 /*
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -59,6 +54,13 @@ import android.widget.TextView;
  * 
  * 3.  (Optional)  the ingr is an array, modify the app to read several ingredients then get the returned info
  *     for that "recipe".
+ * 71b785fe9091261dbe192db334d77dbd
+ * For the API key and other info check www.edamam.com
+	example
+	curl -d @recipe.json -H "Content-Type: application/json" "https://api.edamam.com/api/nutrition-details?app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}"
+	test with
+	curl -d @recipe.json -H "Content-Type: application/json" "https://api.edamam.com/api/nutrition-details?app_id=${e6501390}&app_key=${71b785fe9091261dbe192db334d77dbd}"
+
  * 
  */
 public class HttpsExamplePOST extends Activity {
@@ -70,9 +72,14 @@ public class HttpsExamplePOST extends Activity {
 	 *  
 	 *  This is my key and my appid 
 	 *  GET YOUR OWN if you will be using this in your app
+	 *  For the purposes of the lab you can use mine, I think it will not exceed quota.
 	 */
+	/* 2014 key
 	private static final String APPKEY = "71b785fe9091261dbe192db334d77dbd";
 	private static final String APPID = "e6501390";
+	*/
+	private static final String APPKEY = "77397e154a68c54cb1380e268edffa84";
+	private static final String APPID = "b3f7ba07";
 	private static final String APIURL ="https://api.edamam.com/api/nutrient-info";
 	
 	private String  urlString, jsonData;

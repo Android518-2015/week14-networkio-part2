@@ -1,0 +1,1 @@
+The script to test the api is in the assets directory along with json recipie to use.
